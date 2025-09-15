@@ -12,17 +12,16 @@ class CustomButton(Button):
         super().__init__(**kwargs)
         self.background_normal = ''
         self.background_down = ''    
-        self.background_color = (0, 0, 0, 0)  # transparente
+        self.background_color = (0, 0, 0, 0)  
 
-        # 🎨 Paleta moderna (dark + azul marino)
         if not is_operator:
-            self.normal_color = (0.18, 0.18, 0.18, 1)   # gris oscuro
-            self.hover_color = (0.28, 0.28, 0.28, 1)   # gris más claro
-            self.pressed_color = (0.1, 0.1, 0.1, 1)    # casi negro
+            self.normal_color = (0.18, 0.18, 0.18, 1)  
+            self.hover_color = (0.28, 0.28, 0.28, 1)   
+            self.pressed_color = (0.1, 0.1, 0.1, 1)   
         else:
-            self.normal_color = (0.12, 0.22, 0.45, 1)  # azul marino
-            self.hover_color = (0.23, 0.42, 0.85, 1)   # azul brillante
-            self.pressed_color = (0.08, 0.18, 0.35, 1) # azul oscuro
+            self.normal_color = (0.12, 0.22, 0.45, 1) 
+            self.hover_color = (0.23, 0.42, 0.85, 1)  
+            self.pressed_color = (0.08, 0.18, 0.35, 1) 
 
         self.current_color = self.normal_color
 
@@ -67,7 +66,7 @@ class CalculadoraApp(App):
     def build(self):
         self.title = "Calculadora"
         Window.size = (800, 600)
-        Window.clearcolor = (0.08, 0.08, 0.08, 1)  # fondo global oscuro
+        Window.clearcolor = (0.08, 0.08, 0.08, 1)  
         self.last_was_operator = None
         self.last_was_equal = False
 
